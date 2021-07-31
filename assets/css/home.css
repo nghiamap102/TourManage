@@ -1155,23 +1155,34 @@ ul {
 }
 
 .bottom-blog {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 220, 220);
     padding: 20px;
     margin: -30px 30 30 30px;
+    border-radius: 0 0 10px 10px;
 }
 
 .bottom-blog h5 {
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.8;
+    text-align: center;
 }
 
 .bottom-blog a {
     text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
 
-.first-src {
-    color: black;
+.twice-src {
+    margin: 0 0 0 30%;
+    border: none!important;
+    outline: none;
+    -webkit-box-shadow: none!important
+}
+
+.blog .twice-src:hover {
+    background: orange;
 }
 
 .blog .twice-src {
