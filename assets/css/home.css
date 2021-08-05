@@ -156,7 +156,13 @@ sup {
 a {
     color: #007bff;
     text-decoration: none;
-    background-color: transparent
+    background-color: transparent;
+    border: none!important;
+    outline: none!important;
+}
+
+a:active {
+    background: transparent!important;
 }
 
 a:hover {
@@ -229,6 +235,19 @@ button {
 button:focus {
     outline: 1px dotted;
     outline: 5px auto -webkit-focus-ring-color
+}
+
+form .btn {
+    padding: 5 10px;
+    border-radius: 10px;
+    background: orange;
+    border: none;
+    outline: none;
+}
+
+form .btn:hover {
+    background: wheat;
+    color: rgb(163, 27, 218);
 }
 
 input,
@@ -1387,26 +1406,27 @@ ul {
 }
 
 .animated {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
 }
 
-.navbar-dialog-option ul {
+
+/* .navbar-dialog-option ul {
     display: flex;
     top: 15;
-    left: 30%;
+    right: 0;
     position: absolute;
     align-items: center;
 }
 
 .nav-item-dialog {
     display: inline-block;
-    font-size: 14px;
+    font-size: 8px;
 }
 
 .navbar-dialog-option {
     display: flex;
-}
+} */
 
 #to-top {
     right: 35px;
@@ -1564,4 +1584,342 @@ ul {
     align-items: center;
     color: rgb(240, 123, 45);
     cursor: pointer;
+}
+
+
+/* -----------------------------about.html---- */
+
+.src-title-layout {
+    position: relative;
+    height: 720px;
+    background-image: url(../images/bg-main-about.jpg);
+}
+
+.src-title-layout .overlay {
+    background: linear-gradient( 316deg, #774fd1, #53c35f);
+}
+
+.src-title-layout .row {
+    height: 720px;
+}
+
+.src-title-layout h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+.src-page li {
+    color: white;
+    display: inline-block;
+}
+
+.src-ftco-search-tour .ftco-search {
+    margin: 0;
+}
+
+.title-img-detail img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+.show .modal-dialog {
+    max-width: 70%;
+    position: relative;
+    max-height: 500px;
+    top: 0;
+}
+
+.show .modal-content {
+    max-height: 700px;
+    top: 0;
+}
+
+.show img {
+    height: 600px;
+}
+
+.title-img-detail .row {
+    margin-bottom: 20px;
+}
+
+.title-img-detail h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgb(235, 148, 35);
+    font-weight: 700;
+}
+
+.location span {
+    color: rgb(212, 166, 122);
+}
+
+.location p,
+.price-detail {
+    margin: 0;
+    line-height: 1;
+}
+
+.location p {
+    font-weight: 600;
+}
+
+.linethout {
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.price-saled {
+    color: rgb(235, 148, 35);
+    font-size: 25px;
+}
+
+.sale-percent {
+    position: absolute;
+    top: -60;
+    left: 78%;
+    background-color: rgb(235, 148, 35);
+    padding: 10px;
+    border-radius: 15px;
+    color: wheat;
+}
+
+.sale-percent::after {
+    content: "";
+    position: absolute;
+    width: 5;
+    height: 5;
+    border-top: 20px solid rgb(235, 148, 35);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: -20;
+    right: 22px;
+}
+
+.title-img-detail .col-md {
+    margin-top: 20px;
+}
+
+.title-img-detail .col-md img {
+    height: 250px;
+}
+
+.content-feature-wrapper {
+    padding: 15px 10px;
+    text-indent: 20;
+    border-radius: 20px;
+    background: linear-gradient( 101deg, rgb(95 97 223) 0%, rgb(254, 110, 154) 50%, rgb(254, 132, 100) 100%);
+}
+
+.content-feature {
+    background: rgb(248, 209, 209);
+    border-radius: 20px;
+    padding: 15px 0;
+}
+
+.content-feature-wrapper p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.special-feature h3 {
+    color: rgb(235, 148, 35);
+    font-weight: 600;
+}
+
+.svg1,
+.svg2 {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    z-index: -1;
+}
+
+.ufo,
+.kkc {
+    position: absolute;
+    height: 30%;
+    z-index: -1;
+}
+
+.ufo {
+    width: 15%;
+    left: 0;
+    top: -10;
+}
+
+.kkc {
+    width: 30%;
+    right: 0;
+    bottom: 0;
+}
+
+.svg1 {
+    right: 0;
+}
+
+.svg2 {
+    left: 0;
+}
+
+.svg1 img,
+.svg2 img,
+.ufo img,
+.kkc img {
+    width: 100%;
+}
+
+.schedule,
+.special-feature,
+.comment,
+.request {
+    position: relative;
+}
+
+.schedule p {
+    color: gray;
+    font-weight: 500;
+}
+
+.collapse-all {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: blue;
+}
+
+#close {
+    display: none;
+}
+
+.heahding-decription {
+    font-weight: 600;
+    color: rgb(247, 119, 119);
+}
+
+.card a {
+    background: orange;
+    outline: none;
+}
+
+.card a:hover {
+    background: wheat;
+}
+
+.decription {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.content-decription {
+    display: flex;
+    flex-direction: column;
+}
+
+.decription span {
+    font-size: 50px;
+    margin-right: 10px;
+    color: orange;
+}
+
+.content-decription-left,
+.content-decription-right {
+    display: flex;
+    width: 350px;
+}
+
+.accordion {
+    margin-bottom: 30px;
+}
+
+.form-register {
+    position: sticky;
+    padding-top: 40px;
+    top: 0;
+}
+
+.form-register .form-group {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.form-register .form-group span {
+    margin-right: 15px;
+}
+
+.form-register .form-control {
+    border-radius: 15px;
+}
+
+.form-register h3 {
+    text-align: center;
+    color: rgb(173, 51, 230);
+    font-weight: 600;
+}
+
+.form-register button {
+    margin: 0 35%;
+    border: none;
+    background-color: orange;
+}
+
+.rate-wrapper {
+    padding: 10px;
+    border: 1px solid rgb(224, 224, 224)
+}
+
+.rating-wrapper {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list-star-avg li,
+.list-star-cmt li {
+    display: inline-block;
+    position: relative;
+    color: rgb(209, 209, 209);
+}
+
+.list-star-detail li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-star-detail i {
+    vertical-align: bottom;
+    color: rgb(209, 207, 207);
+    font-size: 20px;
+}
+
+.percent {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #dddddd;
+    max-width: 150px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.choose-star {
+    display: flex;
+}
+
+.area-cmt {
+    margin: 10px 0;
 }
