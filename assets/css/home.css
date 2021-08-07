@@ -155,7 +155,7 @@ sup {
 
 a {
     color: #007bff;
-    text-decoration: none;
+    text-decoration: none!important;
     background-color: transparent;
     border: none!important;
     outline: none!important;
@@ -237,7 +237,8 @@ button:focus {
     outline: 5px auto -webkit-focus-ring-color
 }
 
-form .btn {
+form .btn,
+#booking {
     padding: 5 10px;
     border-radius: 10px;
     background: orange;
@@ -245,7 +246,8 @@ form .btn {
     outline: none;
 }
 
-form .btn:hover {
+form .btn:hover,
+#booking:hover {
     background: wheat;
     color: rgb(163, 27, 218);
 }
@@ -1864,10 +1866,9 @@ ul {
     font-weight: 600;
 }
 
-.form-register button {
-    margin: 0 35%;
+.btn-wrapper {
+    margin: 0 20%;
     border: none;
-    background-color: orange;
 }
 
 .rate-wrapper {
@@ -1922,4 +1923,89 @@ ul {
 
 .area-cmt {
     margin: 10px 0;
+}
+
+
+/* -------------------booking.html--------------- */
+
+.table-responsive {
+    padding: 20px 0;
+}
+
+.timing-tour h3,
+.infor-booking h3 {
+    text-align: center;
+}
+
+.timetable_sub tr {
+    width: 100%;
+}
+
+.timetable_sub th {
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+.timetable_sub td {
+    text-align: center;
+}
+
+.price-total-wrapper {
+    padding: 15px 30%;
+}
+
+.price-css {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-booking button {
+    margin: 0 44%;
+}
+
+.icon-contact span {
+    padding: 20px;
+    background: #f15d30;
+    border-radius: 50%;
+    font-size: 35px;
+    color: rgb(255, 239, 211);
+}
+
+.box-contact h3 {
+    font-size: 18px;
+    color: rgb(255, 134, 112);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.box-contact {
+    width: 100%;
+}
+
+.box-contact a,
+.box-contact p {
+    color: gray;
+}
+
+.form-contact {
+    padding: 0 40px;
+    width: 100%;
+}
+
+.form-contact input {
+    padding: 20px 10;
+    margin-bottom: 20px;
+}
+
+.form-wrapper {
+    height: 100%;
+    align-items: center;
+}
+
+.form-contact button {
+    margin-top: 20px;
 }
