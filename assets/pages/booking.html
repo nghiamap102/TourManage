@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no" />
     <title>Tour Management</title>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="../font/fontawesome-free-5.15.3-web/css/all.min.css">
+
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/resp.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
     <link rel="stylesheet" type="text/css" href="../font/flaticon.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-5.15.3-web/css/all.min.css">
+
     <link rel="stylesheet" href="../js/bootstrap-4.3.1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../js/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -17,7 +20,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </head>
-
 
 <body>
     <header id="header-top" class="heading-top">
@@ -35,11 +37,11 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home</a>
                         </li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
                         <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
                         <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#login" class="nav-link" data-target="#login" data-toggle="modal">Account</a></li>
                     </ul>
                 </div>
                 <!-- <div class="navbar-dialog-option">
@@ -238,6 +240,7 @@
         </div>
     </div>
 
+
     <div class="intro py-5">
         <div class="container py-5">
             <div class="intro-wrapper py-5 text-center">
@@ -364,7 +367,6 @@
         </div>
     </footer>
 
-
     <div class="modal fade" id="login" tabindex="-1" role="dialog" style="display: none;" aria-expanded="false" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -378,7 +380,8 @@
                                 <i class="fa fa-user"></i>
                             </div>
                             <div class="input-place">
-                                <input name="username" placeholder="Username" class="form-control" type="text" required="" />
+                                <input name="username" id="input_username" pattern="[a-zA-Z0-9]{8,30}" placeholder="Username" class="form-control" value="" type="text" required="" />
+                                <span id="username_err"></span>
                             </div>
                         </div>
 
@@ -387,7 +390,8 @@
                                 <i class="fa fa-lock"></i>
                             </div>
                             <div class="input-place">
-                                <input id="input-password" type="password" placeholder="Password" name="password" class="form-control" required="" />
+                                <input id="input_password" type="password" placeholder="Password" name="password" class="form-control" required="" />
+                                <span id="password_err"></span>
                             </div>
                             <div class="eye" onclick="eyepassword()">
                                 <span>
@@ -525,152 +529,63 @@
     <button onclick="topFunction()" id="to-top" title="Go to top" style="display: none;">
         <span class="fas fa-level-up-alt"></span>
     </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        window.onscroll = function() {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
-                document.getElementById('to-top').style.display = "block";
-            } else {
-                document.getElementById('to-top').style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-        }
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-            $('.popup-with-move-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-slide-bottom'
-            });
-        });
-    </script>
-    <script src="../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet " href="../css/magnific-popup.css">
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/jquery.magnific-popup.min.js"></script>
-    <!-- ----- spacing between  card number ------ -->
-    <script type="text/javascript">
-        // enable spacing for credit card number     
-        $('#card-number-id').on('keyup', function(e) {
-            var val = $(this).val();
-            var newval = '';
-            val = val.replace(/\s/g, '');
-
-            // iterate to letter-spacing after every 4 digits   
-            for (var i = 0; i < val.length; i++) {
-                if (!val[i].match(/[a-z]/)) {
-                    if (i % 4 == 0 && i > 0) newval = newval.concat(' ');
-                    newval = newval.concat(val[i]);
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            nav: false,
+            margin: 30,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                400: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
                 }
             }
-
-            // format in same input field 
-            $(this).val(newval);
-        });
-    </script>
-    <!-- ----- only character name ------- -->
-    <script>
-        $('#card-number-name').on('keyup', function(e) {
-            var val = $(this).val();
-            var newval = ''
-            for (var i = 0; i < val.length; i++) {
-                if (isNaN(val[i])) newval = newval.concat(val[i]);
-            }
-            $(this).val(newval);
-        });
-    </script>
-    <script>
-        $('#card-number-cvv').on('keyup', function(e) {
-            var val = $(this).val();
-            var newval = '';
-            for (var i = 0; i < val.length; i++) {
-                if (!val[i].match(/[a-z]/)) {
-                    console.log(val[i]);
-                    newval = newval.concat(val[i]);
-                }
-            }
-            $(this).val(newval);
-        });
-    </script>
-    <script type="text/javascript">
-        var x = document.getElementById('card-number-id');
-        var y = document.getElementById('card-number-id2');
-
-        // enable spacing for credit card number     
-        [document.getElementById('card-number-id'), document.getElementById('card-number-id2')].forEach(item => {
-            item.addEventListener('keyup', )
         })
     </script>
-    <!-- ----- only character name ------- -->
     <script>
-        $('#card-number-name2').on('keyup', function(e) {
+        $('#input_username').on('keyup', function(e) {
             var val = $(this).val();
-            var newval = ''
-            for (var i = 0; i < val.length; i++) {
-                if (isNaN(val[i])) newval = newval.concat(val[i]);
+            if (val == '' || val.length < 8) {
+                document.getElementById('username_err').innerHTML = "Vui lòng nhập đúng thông tin ";
+            } else {
+                document.getElementById('username_err').innerHTML = "";
             }
-            $(this).val(newval);
         });
     </script>
-    <script src="../js/easyResponsiveTab.js"></script>
     <script>
-        $('#card-number-cvv2').on('keyup', function(e) {
-            var val = $(this).val();
-            var newval = '';
-            for (var i = 0; i < val.length; i++) {
-                if (!val[i].match(/[a-z]/)) {
-                    console.log(val[i]);
-                    newval = newval.concat(val[i]);
-                }
+        function eyepassword() {
+            var x = document.getElementById("input_password");
+            var y = document.getElementById("eye-close");
+            var z = document.getElementById("eye-open");
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
             }
-            $(this).val(newval);
-        });
+        };
     </script>
-    <!-- -------Horizon tab resp--------- -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#parentHorizontalTab').easyResponsiveTabs({
-                type: 'default', //Types: default, vertical, accordion
-                width: 'auto', //auto or any width like 600px
-                fit: true, // 100% fit in a container
-                tabidentify: 'hor_1', // The tab groups identifier
-            });
-        });
+    <script src="../js/owl.carousel.js"></script>
+    <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/theme-change.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/home.js">
     </script>
 </body>
 

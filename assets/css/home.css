@@ -1629,11 +1629,11 @@ ul {
     width: 100%;
 }
 
+.modal.show {}
+
 .show .modal-dialog {
-    max-width: 70%;
     position: relative;
-    max-height: 500px;
-    top: 0;
+    top: 10%;
 }
 
 .show .modal-content {
@@ -2008,4 +2008,9 @@ table {
 
 .form-contact button {
     margin-top: 20px;
+}
+
+#username_error {
+    color: red;
+    font-size: 14px;
 }
