@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.kkc {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 400px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo img {
+    width: 500px;
+    height: 100%;
+}
+
+form {
+    width: 360px;
+}
+
+.login-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-container img {
+    width: 100px;
+}
+
+.login-container .input-box {
+    position: relative;
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 7% 87% 6%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-box>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-box>div>h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-box i {
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 10px 0 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.input-box::before,
+.input-box::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: -2px;
+    background-color: aqua;
+    transition: 0.5s;
+}
+
+.input-box::before {
+    right: 50%;
+}
+
+.input-box::after {
+    left: 50%;
+}
+
+.input-box.focus::before,
+.input-box.focus::after {
+    width: 50%;
+}
+
+.eye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#eye-open {
+    display: none;
+}
+
+.input-place {
+    display: flex;
+}
+
+.input-box.focus h5 {
+    top: -5px;
+    font-size: 14px;
+}
+
+.input-box.focus i {
+    color: rgba(107, 96, 96, 0.37);
+}
+
+.input-place input {
+    background-color: rgb(134, 228, 245);
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    background: none;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0px;
+}
+
+#checkremember {
+    width: 20px;
+    height: 15px;
+}
+
+#rememberme {
+    margin: 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-weight: 500;
+    color: #999;
+}
+
+.forgot-password a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.forgot-password a:hover {
+    color: #18181a;
+}
+
+.forgot-password a:visited {
+    color: rgb(121, 111, 111);
+}
+
+.forgot-password {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px 0px 15px 0px;
+}
+
+.btn-login {
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+}
+
+.btn-login:hover {
+    background-color: blanchedalmond;
+    text-decoration: none;
+}
+
+.btn-login input {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #999;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #999 !important;
+    background-color: #999;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+    .login-container h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .kkc {
+        width: 250px;
+    }
+    .logo {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .kkc,
+    .logo {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 100%;
+    }
+    .login-container {
+        justify-content: center;
+    }
+}

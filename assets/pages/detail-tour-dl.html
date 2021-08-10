@@ -35,11 +35,11 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home</a>
                         </li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
                         <li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
                         <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#login" class="nav-link" data-target="#login" data-toggle="modal">Account</a></li>
                     </ul>
                 </div>
                 <!-- <div class="navbar-dialog-option">
@@ -63,6 +63,7 @@
             </div>
         </nav>
     </header>
+
 
     <div class="src-title-layout bg-img js-auto-height">
         <div class="overlay">
@@ -370,14 +371,14 @@
                             <span class="material-icons-outlined">
                                 person
                             </span>
-                            <input type="text" class="form-control" pattern="[a-zA-Z]{30}" name="firstname" placeholder="First Name" />
+                            <input type="text" class="form-control" pattern="[a-zA-Z]{30}" name="username" placeholder="Username" />
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <span class="material-icons-outlined">
                                 person
                             </span>
                             <input type="text" class="form-control" pattern="[a-zA-Z]{30}" name="lastname" placeholder="Last Name" />
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <span class="material-icons-outlined">
                                 ring_volume
@@ -386,39 +387,39 @@
                         </div>
                         <div class="form-group">
                             <span class="material-icons-outlined">
-                                manage_accounts
-                                </span>
-                            <input type="text" class="form-control" pattern="[0-9]{2}" name="amout" placeholder="Amount people" />
-                        </div>
-                        <div class="form-group">
-                            <span class="material-icons-outlined">
-                                gps_fixed
-                                </span>
-                            <input type="text" class="form-control" name="address" placeholder="Address" />
-                        </div>
-                        <div class="form-group">
-                            <span class="material-icons-outlined">
                                 send
                                 </span>
                             <input type="email" class="form-control" pattern="[a-zA-Z0-9]" name="email" placeholder="Email" />
                         </div>
+                        <div class="form-group">
+                            <span class="material-icons-outlined">
+                                lock
+                                </span>
+                            <input type="text" class="form-control" pattern="[0-9]{8,30}" name="passworđ" placeholder="Your Passworđ" />
+                        </div>
+                        <div class="form-group">
+                            <span class="material-icons-outlined">
+                                lock_open
+                                </span>
+                            <input type="text" class="form-control" pattern="[0-9]{8,30}" name="confirm-passworđ" placeholder="Confirm Your Passworđ" />
+                        </div>
                         <div class="btn-wrapper">
-                            <button class="btn btn-primary">
+                            <a class="btn btn-primary" href="login.html">
                                 Sign In 
-                            </button>
-                            <a class="btn btn-primary" href="#">
-                                Sign Up
                             </a>
+                            <button class="btn btn-primary" href="#">
+                                Sign Up
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="kkc">
-                <img src="../images/kkc.svg">
-            </div>
-            <div class="svg2">
-                <img src="../images/about-shape-2.svg">
-            </div>
+        </div>
+        <div class="kkc">
+            <img src="../images/kkc.svg">
+        </div>
+        <div class="svg2">
+            <img src="../images/about-shape-2.svg">
         </div>
     </div>
 
@@ -823,7 +824,7 @@
                             </div>
 
                             <div class="input-place">
-                                <input name="name" placeholder="Your Name" class="form-control" type="text" required="" />
+                                <input name="name" placeholder="Username" class="form-control" type="text" required="" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -833,6 +834,15 @@
 
                             <div class="input-place">
                                 <input name="email" placeholder="Email" class="form-control" type="email" required="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="input-place">
+                                <input name="phone" placeholder="Your Phone" class="form-control" type="tel" required="" />
                             </div>
                         </div>
                         <div class="form-group">

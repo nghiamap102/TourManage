@@ -280,7 +280,7 @@
                             </div>
 
                             <div class="input-place">
-                                <input name="name" placeholder="Your Name" class="form-control" type="text" required="" />
+                                <input name="name" placeholder="Username" class="form-control" type="text" required="" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -290,6 +290,15 @@
 
                             <div class="input-place">
                                 <input name="email" placeholder="Email" class="form-control" type="email" required="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="input-place">
+                                <input name="phone" placeholder="Your Phone" class="form-control" type="tel" required="" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -396,22 +405,7 @@
         //     }
         // });
     </script>
-    <script>
-        function eyepassword() {
-            var x = document.getElementById("input-password");
-            var y = document.getElementById("eye-open");
-            var z = document.getElementById("eye-close");
-            if (x.type === 'password') {
-                x.type = "text";
-                y.style.display = "block";
-                z.style.display = "none";
-            } else {
-                x.type = 'password';
-                y.style.display = "none";
-                z.style.display = "block";
-            }
-        };
-    </script>
+
     <script src="../js/owl.carousel.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>

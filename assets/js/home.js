@@ -14,6 +14,22 @@ $(window).on('scroll', function() {
         }
     }
 });
+
+function eyepassword() {
+    var x = document.getElementById("input_password");
+    var y = document.getElementById("eye-open");
+    var z = document.getElementById("eye-close");
+    if (x.type === 'password') {
+        x.type = "text";
+        y.style.display = "block";
+        z.style.display = "none";
+    } else {
+        x.type = 'password';
+        y.style.display = "none";
+        z.style.display = "block";
+    }
+};
+
 window.onscroll = function() {
     scrollFunction();
     scrollTopFunction();

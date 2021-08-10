@@ -1453,7 +1453,7 @@ ul {
 }
 
 .modal-content {
-    top: 70px;
+    top: 50px;
     z-index: 99999;
 }
 
@@ -1629,16 +1629,9 @@ ul {
     width: 100%;
 }
 
-.modal.show {}
-
-.show .modal-dialog {
-    position: relative;
-    top: 10%;
-}
-
 .show .modal-content {
     max-height: 700px;
-    top: 0;
+    top: 10;
 }
 
 .show img {
