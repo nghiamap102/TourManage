@@ -161,10 +161,6 @@ a {
     outline: none!important;
 }
 
-a:active {
-    background: transparent!important;
-}
-
 a:hover {
     color: #0056b3;
     text-decoration: underline
@@ -1319,6 +1315,10 @@ ul {
     border-radius: 50%;
     position: relative;
     background: #f15d30;
+}
+
+.footer-tour .col-md {
+    margin-bottom: 30px;
 }
 
 .list-icon a span {

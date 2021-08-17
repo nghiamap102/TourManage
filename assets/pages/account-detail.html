@@ -234,7 +234,7 @@
                                             <div class="form-right">
                                                 <div class="check-option">
                                                     <div class="item-option">
-                                                        <div class="check-wrapper" id="check-wrapper1">
+                                                        <div class="check-wrapper rd1" id="check-wrapper1">
                                                             <div class="radio-button">
                                                                 <div class="center" id="center1">
                                                                 </div>
@@ -243,7 +243,7 @@
                                                         <span>Male</span>
                                                     </div>
                                                     <div class="item-option">
-                                                        <div class="check-wrapper" id="check-wrapper2">
+                                                        <div class="check-wrapper rd2" id="check-wrapper2">
                                                             <div class="radio-button">
                                                                 <div class="center" id="center2">
                                                                 </div>
@@ -252,7 +252,7 @@
                                                         <span>Female</span>
                                                     </div>
                                                     <div class="item-option">
-                                                        <div class="check-wrapper" id="check-wrapper3">
+                                                        <div class="check-wrapper rd3" id="check-wrapper3">
                                                             <div class="radio-button">
                                                                 <div class="center" id="center3">
                                                                 </div>
@@ -681,20 +681,65 @@
         });
     </script>
     <script>
-        document.getElementById('check-wrapper1').addEventListener('click', function() {
-            document.getElementById('center1').style.opacity = '1';
-        });
-        document.getElementById('check-wrapper2').addEventListener('click', function() {
-            document.getElementById('center2').style.opacity = '1';
-        });
-        document.getElementById('check-wrapper3').addEventListener('click', function() {
-            document.getElementById('center3').style.opacity = '1';
-        });
+        var btn = $('.check-wrapper');
+        var el1 = document.getElementById('center1');
+        var el2 = document.getElementById('center2');
+        var el3 = document.getElementById('center3');
+        var bl = true;
+        var arr = [];
+        arr.push(el1, el2, el3);
+        console.log(arr);
+        // for (j = 0; j < arr.length; j++) {
+        //     if (arr[i].style.opacity == 1) {
+
+        //     }
+        // }
+        // for (i = 0; i < 3; i++) {
+        //     btn[0].onclick = function() {
+        //         if (bl) {
+        //             el1.style.opacity = "0";
+        //             bl = false;
+        //         } else {
+        //             el1.style.opacity = "1";
+        //             bl = true;
+        //         }
+        //     }
+        //     btn[1].onclick = function() {
+        //         if (bl) {
+        //             el2.style.opacity = "0";
+        //             bl = false;
+        //         } else {
+        //             el2.style.opacity = "1";
+        //             bl = true;
+        //         }
+        //     }
+        //     btn[2].onclick = function() {
+        //         if (bl) {
+        //             el3.style.opacity = "0";
+        //             bl = false;
+        //         } else {
+        //             el3.style.opacity = "1";
+        //             bl = true;
+        //         }
+        //     }
+        // }
+        var el = $('.item-option');
+        console.log(el);
+        for (i = 0; i < el.length; i++) {
+            el[i].onclick = function() {
+                el.
+                $(this).children('.check-wrapper').children('center').css('opacity', '1');
+                // $(this).('.check-wrapper > .center').css('opacity', '1');
+            };
+
+            // el[i].onclick = function() {
+            //    
+            // };
+        }
     </script>
     <script src="../js/owl.carousel.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/theme-change.js"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
     <script src="../js/home.js">

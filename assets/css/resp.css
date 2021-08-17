@@ -58,3 +58,48 @@
         max-width: 1200px!important;
     }
 }
+
+#header-top .navbar-toggler {
+    background-color: wheat;
+    /* display: block; */
+    outline: none;
+}
+
+#header-top .navbar-toggler-icon {
+    background-image: url(../images/toggler.svg);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: wheat;
+        border-radius: 15px;
+    }
+    .img-about-wrapper {
+        height: 300px;
+    }
+    .banner1,
+    .banner3,
+    .banner4 {
+        width: 100%;
+    }
+    .container2 {
+        max-width: 1290px!important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tour-packed .row,
+    .blog .row {
+        justify-content: center;
+    }
+    .tour-packed .col-md-6,
+    .blog .col-md-4 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .copyright {
+        left: 10%;
+    }
+}
