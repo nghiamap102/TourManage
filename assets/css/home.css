@@ -478,7 +478,7 @@ p {
     top: -8px;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 5;
 }
 
 .ftco-navbar-light .navbar-brand {
@@ -1108,7 +1108,6 @@ ul {
 
 .img-testimonial {
     position: relative;
-    background-image: url(../images/fukada.jpg);
     width: 60px;
     height: 60px;
     position: relative;
@@ -1116,6 +1115,34 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.ava1 {
+    background-image: url(../images/ava1.jpg);
+}
+
+.ava2 {
+    background-image: url(../images/ava2.jpg);
+}
+
+.ava3 {
+    background-image: url(../images/ava3.jpg);
+}
+
+.ava4 {
+    background-image: url(../images/ava4.jpg);
+}
+
+.ava5 {
+    background-image: url(../images/ava5.jpg);
+}
+
+.ava6 {
+    background-image: url(../images/fukada.jpg);
+}
+
+.content-feedback {
+    height: 150px;
 }
 
 .infor {
