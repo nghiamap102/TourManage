@@ -67,3 +67,40 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 }
+
+
+
+function getEle(id) {
+    return document.getElementById(id);
+}
+
+
+function abc() {
+    var check = getEle('theme');
+
+    if (check.checked === true) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+
+            getEle('sun').style.animationName = "sunOp";
+            getEle('moon').style.animationName = "moonOp";
+
+            // if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            //     console.log(document.documentElement.getAttribute('data-theme'));
+        }
+        // }
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        if (document.documentElement.getAttribute('data-theme') === 'light') {
+            getEle('sun').style.animationName = "moonOp";
+            getEle('moon').style.animationName = "sunOp";
+        }
+    }
+}
+document.getElementById('theme').addEventListener('change', abc)
+window.onload = function() {
+    eyepassword();
+}

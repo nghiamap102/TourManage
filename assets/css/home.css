@@ -65,7 +65,8 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff sc
+    background-color: var(--bg-color)!important;
+    transition: background 500ms ease;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2228,4 +2229,62 @@ table {
     height: 100px;
     width: 100px;
     border-radius: 50%;
+}
+
+#theme {
+    display: none;
+}
+
+.theme-wrapper,
+.show .theme-wrapper {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.theme-wrapper img,
+.show .theme-wrapper img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#sun,
+#moon {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    /* animation-name: sunOp; */
+    position: absolute;
+    top: 0%;
+}
+
+#moon {
+    opacity: 0;
+}
+
+@keyframes sunOp {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateY(108deg);
+    }
+}
+
+@keyframes moonOp {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateY(108deg);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
