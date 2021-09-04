@@ -31,29 +31,28 @@ function eyepassword() {
 };
 
 window.onscroll = function() {
-    scrollFunction();
     scrollTopFunction();
 }
 
-function scrollFunction() {
-    var getValue = document.getElementsByClassName('animated');
-    var arr = [];
+// function scrollFunction() {
+//     var getValue = document.getElementsByClassName('animated');
+//     var arr = [];
 
-    var x = document.documentElement.scrollTop;
-    var y = document.body.scrollTop;
-    var j = 0;
-    for (i = 0; i < getValue.length; i++) {
-        arr.push(getValue[i].classList);
-    }
-    for (i = 0; i < getValue.length; i++) {
-        if (j < 10000) {
-            if (document.documentElement.scrollTop > j || document.body.scrollTop > j) {
-                getValue[i + 1].classList.add('fadeInUp');
-                j += 280;
-            }
-        }
-    }
-}
+//     var x = document.documentElement.scrollTop;
+//     var y = document.body.scrollTop;
+//     var j = 0;
+//     for (i = 0; i < getValue.length; i++) {
+//         arr.push(getValue[i].classList);
+//     }
+//     for (i = 0; i < getValue.length; i++) {
+//         if (j < 10000) {
+//             if (document.documentElement.scrollTop > j || document.body.scrollTop > j) {
+//                 getValue[i + 1].classList.add('fadeInUp');
+//                 j += 280;
+//             }
+//         }
+//     }
+// }
 
 function scrollTopFunction() {
     if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
