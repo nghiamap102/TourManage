@@ -856,6 +856,7 @@ p {
     background-position: center center;
     padding-top: 50px;
     padding-bottom: 250px;
+    position: relative;
 }
 
 .card-item {
@@ -893,6 +894,31 @@ p {
     background-image: url(../images/dl.jpg);
 }
 
+.tours-remaining .col_circle {
+    position: absolute;
+    width: 210px;
+    height: 320px;
+    display: flex;
+    top: 25%;
+    left: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.card_more:hover {
+    background-color: aqua;
+    color: #20c997;
+}
+
+.card_more {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: wheat;
+    color: black;
+}
+
 .text {
     padding: 20px;
     position: relative;
@@ -923,7 +949,9 @@ p {
     border-radius: 15px 0 0 15px;
 }
 
-.packed-wrapper {}
+.packed-wrapper {
+    position: relative;
+}
 
 .packed-wrapper li {
     display: inline;
@@ -937,18 +965,45 @@ p {
     width: 100%;
     display: block;
     border-radius: 0 15px;
+    position: relative;
 }
 
-.src-packed span {
+.src-packed:hover+.overlay_packed {
+    /* display: block; */
+}
+
+.price_wrapper span {
     position: absolute;
     top: -15;
-    left: 0;
+    left: -10px;
     color: white;
     border-radius: 0 15px 15px 0;
     background: #f15d30;
     padding: 5 15px;
     font-size: 18px;
     font-weight: 600;
+}
+
+.name_tour {
+    position: absolute;
+    top: 35%;
+    left: 34%;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    display: none;
+    z-index: 3;
+}
+
+#overlay_packed {
+    position: absolute;
+    top: -0px;
+    left: 0;
+    opacity: 0.7;
+    height: 300px;
+    width: 100%;
+    display: none;
+    background: linear-gradient(45deg, rgb(184, 90, 228), rgb(243, 200, 83));
 }
 
 .vt-packed {
@@ -980,6 +1035,7 @@ p {
     margin: -50px 20px 30px 20px;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
 }
 
 .decription-packed p {
@@ -1439,24 +1495,6 @@ ul {
     opacity: 0;
     visibility: hidden;
 }
-
-
-/* .navbar-dialog-option ul {
-    display: flex;
-    top: 15;
-    right: 0;
-    position: absolute;
-    align-items: center;
-}
-
-.nav-item-dialog {
-    display: inline-block;
-    font-size: 8px;
-}
-
-.navbar-dialog-option {
-    display: flex;
-} */
 
 #to-top {
     right: 35px;

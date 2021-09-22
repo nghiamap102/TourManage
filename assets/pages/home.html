@@ -54,7 +54,6 @@
             <img class="sun" id="sun" src="../images/sun.svg" alt="">
             <img class="moon" id="moon" src="../images/night-mode.svg" alt="">
         </label>
-
     </header>
 
     <div class="main-top-video js-auto-height">
@@ -297,6 +296,15 @@
     </div>
 
     <div class="tours-remaining">
+        <div class="col_circle">
+            <a href="/" class="card_more d-flex justify-content-center align-items-center">
+                <div class="circle_wrapper">
+                    <div class="circle">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
         <div class="container container2 py-3">
             <div class="heading-tours text-center">
                 <span class="subheading">Tormy Provide Places</span>
@@ -304,6 +312,7 @@
             </div>
         </div>
         <div class="container container2 ">
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="carousel-tours owl-carousel owl-theme animated owl-loaded owl-drag">
@@ -1278,14 +1287,6 @@
         })
     </script>
     <script>
-        $('#input_username').on('keyup', function(e) {
-            var val = $(this).val();
-            if (val == '' || val.length < 8) {
-                document.getElementById('username_err').innerHTML = "Vui lòng nhập đúng thông tin ";
-            } else {
-                document.getElementById('username_err').innerHTML = "";
-            }
-        });
         // $('#input_password').on('keyup', function(e) {
         //     var val = $(this).val();
         //     if (val == '' || val.length < 8) {
@@ -1296,31 +1297,10 @@
         // });
     </script>
     <script>
-        var items = document.querySelectorAll('.animated')
-
-        function callbackFunc() {
-
-            for (var i = 0; i < items.length; i++) {
-                var rect = items[i].getBoundingClientRect();
-
-                if (rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <=
-                    (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
-                    items[i].classList.add("fadeInUp");
-                }
-            }
-        }
-        window.addEventListener("load", callbackFunc);
-        window.addEventListener("resize", callbackFunc);
-        window.addEventListener("scroll", callbackFunc);
-        console.log(items.length)
     </script>
     <script src="../js/owl.carousel.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/theme-change.js"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.magnific-popup.min.js"></script>
     <script async defer src="../js/home.js">

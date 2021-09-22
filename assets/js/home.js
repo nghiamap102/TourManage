@@ -13,6 +13,9 @@ $(window).on('scroll', function() {
             $('#header-top').addClass('sleep');
         }
     }
+    if (scroll == 0) {
+        $('#header-top').removeClass('sleep')
+    }
 });
 
 function eyepassword() {
@@ -34,25 +37,7 @@ window.onscroll = function() {
     scrollTopFunction();
 }
 
-// function scrollFunction() {
-//     var getValue = document.getElementsByClassName('animated');
-//     var arr = [];
 
-//     var x = document.documentElement.scrollTop;
-//     var y = document.body.scrollTop;
-//     var j = 0;
-//     for (i = 0; i < getValue.length; i++) {
-//         arr.push(getValue[i].classList);
-//     }
-//     for (i = 0; i < getValue.length; i++) {
-//         if (j < 10000) {
-//             if (document.documentElement.scrollTop > j || document.body.scrollTop > j) {
-//                 getValue[i + 1].classList.add('fadeInUp');
-//                 j += 280;
-//             }
-//         }
-//     }
-// }
 
 function scrollTopFunction() {
     if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
@@ -101,5 +86,38 @@ function abc() {
 }
 document.getElementById('theme').addEventListener('change', abc)
 window.onload = function() {
+
     eyepassword();
 }
+
+
+
+
+
+$('#input_username').on('keyup', function(e) {
+    var val = $(this).val();
+    if (val == '' || val.length < 8) {
+        document.getElementById('username_err').innerHTML = "Vui lòng nhập đúng thông tin ";
+    } else {
+        document.getElementById('username_err').innerHTML = "";
+    }
+});
+var items = document.querySelectorAll('.animated')
+
+function callbackFunc() {
+
+    for (var i = 0; i < items.length; i++) {
+        var rect = items[i].getBoundingClientRect();
+
+        if (rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+            items[i].classList.add("fadeInUp");
+        }
+    }
+}
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
