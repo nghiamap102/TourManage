@@ -137,7 +137,7 @@
                                 <div class="col-md d-flex">
                                     <div class="form-group d-flex w-100">
                                         <div class="form-field w-100 align-items-center d-flex">
-                                            <input type="submit" value="Search" class="align-self-stretch btn-search form-control btn btn-primary">
+                                            <input type="submit" id="search_btn" value="Search" class="align-self-stretch btn-search form-control btn btn-primary">
                                         </div>
                                     </div>
                                 </div>
@@ -164,8 +164,8 @@
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i1 mb-4">
                                     <div class="src-packed vt-packed"></div>
-                                    <div class="name_tour">
-                                        Vũng Tàu
+                                    <div class="name_tour c1">
+                                        Vung Tau
                                     </div>
                                     <a href="#" class="a1" id="overlay_packed">
                                     </a>
@@ -197,6 +197,9 @@
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i2 mb-4">
                                     <div class="src-packed nt-packed"></div>
+                                    <div class="name_tour c2">
+                                        Nha Trang
+                                    </div>
                                     <a href="#" class="a2" id="overlay_packed">
                                     </a>
                                     <div class="price_wrapper">
@@ -226,7 +229,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i3 mb-4">
+
                                     <div class="src-packed dl-packed"></div>
+                                    <div class="name_tour c3">
+                                        Dalas
+                                    </div>
                                     <a href="#" class="a3" id="overlay_packed">
                                     </a>
                                     <div class="price_wrapper">
@@ -257,6 +264,9 @@
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i4 mb-4">
                                     <div class="src-packed vhl-packed"></div>
+                                    <div class="name_tour c4">
+                                        Ha Long Bay
+                                    </div>
                                     <a href="#" class="a4" id="overlay_packed">
                                     </a>
                                     <div class="price_wrapper">
@@ -287,6 +297,9 @@
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i5 mb-4">
                                     <div class="src-packed pq-packed"></div>
+                                    <div class="name_tour c5">
+                                        Phu Quoc
+                                    </div>
                                     <a href="#" class="a5" id="overlay_packed">
                                     </a>
                                     <div class="price_wrapper">
@@ -317,6 +330,9 @@
                             <div class="col-lg-4 col-md-4 animated fadeInUp">
                                 <div class="packed-wrapper i6 mb-4">
                                     <div class="src-packed sapa-packed"></div>
+                                    <div class="name_tour c6">
+                                        Sapa
+                                    </div>
                                     <a href="#" class="a6" id="overlay_packed">
                                     </a>
                                     <div class="price_wrapper">
@@ -836,28 +852,37 @@
         var a = document.querySelectorAll('.packed-wrapper');
 
 
-        function show(adevent, show) {
+        function show(adevent, show, name) {
             $(adevent).mouseover(function() {
                 $(show).show();
-                $('.name_tour').show();
-
+                $(name).show();
             })
         }
 
-        function hide(adevent, show) {
+        function hide(adevent, show, name) {
             $(adevent).mouseout(function() {
                 $(show).hide();
-                $('.name_tour').hide();
+                $(name).hide();
 
             })
         }
         for (let i = 1; i <= a.length; i++) {
-            show('.i' + i, '.a' + i)
-            hide('.i' + i, '.a' + i)
+            show('.i' + i, '.a' + i, '.c' + i)
+            hide('.i' + i, '.a' + i, '.c' + i)
         }
-        // $(".packed-wrapper").mouseout(function() {
-        //     $('#overlay_packed').hide();
-        // })
+
+        function getAll(name) {
+            return document.querySelectorAll(name);
+        }
+
+        function search(e) {
+            e.preventDefault();
+            for (let i = 1; i < a.length; i++) {
+                $('.c' + i).css('border', '1px black solid')
+                console.log(getAll('.c' + i));
+            }
+        }
+        document.getElementById('search_btn').addEventListener('click', search)
     </script>
 </body>
 
