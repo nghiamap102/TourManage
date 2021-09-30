@@ -88,8 +88,15 @@
     .container2 {
         max-width: 1290px!important;
     }
+    .navbar-toggler{
+        margin-right: 40px;
+    }
 }
-
+@media screen and (max-width:576px){
+    .navbar-toggler{
+        margin-right: 80px;
+    }
+}
 @media screen and (max-width: 768px) {
     .tour-packed .row,
     .blog .row {

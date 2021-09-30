@@ -972,7 +972,7 @@ p {
     /* display: block; */
 }
 
-.price_wrapper span {
+.price-packed  {
     position: absolute;
     top: -15;
     left: -10px;
@@ -1373,10 +1373,11 @@ ul {
 }
 
 .footer-tour ul li {
-    position: relative;
-    display: inline-block;
+    position: relative;padding-left: 15px;
 }
-
+.footer-tour .phone, .footer-tour .mail{
+    justify-content: start;
+}
 .footer-first p {
     line-height: 2;
     color: rgb(150, 147, 147);
