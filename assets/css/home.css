@@ -2074,7 +2074,7 @@ table {
     color: red;
     font-size: 14px;
 }
-
+/* ------------------------profile------------------- */
 .header-profile {
     display: flex;
     justify-content: center;
@@ -2269,7 +2269,7 @@ table {
     width: 100px;
     border-radius: 50%;
 }
-
+/* ----------------------theme----------------------- */
 #theme {
     display: none;
 }
