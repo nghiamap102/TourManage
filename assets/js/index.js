@@ -1,3 +1,3 @@
 setTimeout(function() {
-    window.location = "./Pages/Home.html";
+    window.location = "./assets/pages/home.html";
 }, 2000);
