@@ -91,9 +91,6 @@ window.onload = function() {
 }
 
 
-
-
-
 $('#input_username').on('keyup', function(e) {
     var val = $(this).val();
     if (val == '' || val.length < 8) {
